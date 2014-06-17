@@ -136,8 +136,8 @@ Thanks to Dani Valderas, Alejandro Juez, Carles Xavier Vilás and Jacob Uribe fo
 %ABSTRACT EN DOS IDIOMES. COM A MÍNIM CATALÀ. SI L'ALTRE ÉS EN CASTELLA CANVIEU EL QUE POSA ABSTRACT
 \selectlanguage{english}
 \section*{\Large \sffamily Abstract}
-The open Wi-Fi, at the city, is increasingly used by the citizens.
-Barcelona, a city with more than 720 Wi-Fi access points, and an average of 66.912 users in 2013, is an example. Under this scenario, currently growing, this project aims at offering a web visualization of the availability of access points of a Wi-Fi access network. Two examples of such access networks are \emph{BarcelonaWi-Fi} and \emph{Poblenou Sense Fils}. The tool is general enough to be used in other access networks. 
+The municipal open Wi-Fi is increasingly used by the citizens.
+This project aims at offering a web visualization of the availability of access points of a Wi-Fi access network. Two examples of such access networks are \emph{BarcelonaWi-Fi} and \emph{Poblenou Sense Fils}. The tool is general enough to be used in other access networks. 
 
 This tool is divided in two parts. The first one is a Raspberry Pi that directly connects to the Wi-Fi access network and continuously gathers data about the availability of the access points. This information is sent to the second part, which is a server with a NoSQL database and a web interface to visualize the data on a map.
 
@@ -147,8 +147,8 @@ The ultimate goal is to increase the visibility and transparency of the Wi-Fi se
 \vspace*{\fill}
 \section*{\Large \sffamily  Resum}
 
-El Wi-Fi obert, a la ciutat és cada vegada més utilitzat pels ciutadans. 
-Barcelona, una ciutat amb més de 720 punts d'accés Wi-Fi, i una mitjana de 66.912 usuaris el 2013, és un exemple. Sota aquest escenari, actualment en creixement, aquest projecte té com a objectiu oferir una visualització web de la disponibilitat dels punts d'accés d'una xarxa d'accés Wi-Fi. Dos exemples d'aquestes xarxes d'accés són \emph{BarcelonaWi-Fi} i \emph{Poblenou Sense Fils}. L'eina és prou general per ser utilitzada en altres xarxes d'accés. 
+El Wi-Fi municipal és cada vegada més utilitzat pels ciutadans. 
+Aquest projecte té com a objectiu oferir una visualització web de la disponibilitat dels punts d'accés d'una xarxa d'accés Wi-Fi. Dos exemples d'aquestes xarxes d'accés són \emph{BarcelonaWi-Fi} i \emph{Poblenou Sense Fils}. L'eina és prou general per ser utilitzada en altres xarxes d'accés. 
 
 Aquesta eina es divideix en dues parts. La primera és una Raspberry Pi que es connecta directament a la xarxa d'accés Wi-Fi i contínuament recull dades sobre la disponibilitat dels punts d'accés. Aquesta informació s'envia a la segona part, que és un servidor amb una base de dades NoSQL i una interfície web per visualitzar les dades en un mapa. 
 
@@ -192,21 +192,21 @@ This thesis is part of a new way of acting in terms of the provision of Internet
 
 Until now, Internet Service Providers (ISP) were responsible of the Internet regarding design, deployment and operation of the network, in which they remain completely owners of the infrastructure to provide the service. Now with this new form of network deployment, end users are the owners of the network, and therefore responsible of its consumption and maintenance.
 
-This thesis aims at providing a tool to monitor the status of the access points of "\emph{Barcelona WiFi}" and share this information with the citizens. To gather the information from "\emph{Barcelona WiFi}" access points, the collaboration of the Institut Municipal d'Informàtica (IMI) is required. The tool is general enough to be used by other Wi-Fi access networks in Barcelona and other cities.
+This thesis aims at providing a tool to monitor the status of the access points of ``\emph{Barcelona WiFi}" and share this information with the citizens. To gather the information from ``\emph{Barcelona WiFi}" access points, the collaboration of the Institut Municipal d'Informàtica (IMI) is required. The tool is general enough to be used by other Wi-Fi access networks in Barcelona and other cities.
 
 
 The project consists of two parts, the part of collecting data of the \emph{Barcelona WiFi} access points, and the part of representing the data collected in such way that the ordinary citizen can benefit from this information. 
 
-To carry out this project, it is needed two devices, a server and a Raspberry PI. In addition, it requires programming a web service and a web application and the configuration of the server. It is needed too, to program a software for the generation, transfer and storage of the hotspots information, which is located at the Raspberry PI.
+To carry out this project, two devices are needed: a server and a Raspberry Pi. In addition, it requires programming a web service and a web application. It is also required to configure the server. Finally, it is necessary to program a software for the generation, transfer and storage of the hotspots information, which is located at the Raspberry PI.
 
 The elements of this system, and its operation, are explained at the following chapters.
   
 \chapter{State of the Art}
 \label{Chapter2}
 
-Wi-Fi is a wireless technology with a limited range, emerged from the wireless communication incompatibility existed between devices from different manufacturers.
+Wi-Fi is a wireless technology with a limited range, emerged from the wireless communication incompatibility that existed between devices from different manufacturers.
 
-This incompatibility made that a group of companies of this sector, found an association with the aim of define the behavior that would use wireless technology to act on and connect, making it consistent between brands. 
+This incompatibility made that a group of companies of this sector, found an association with the aim of defining and standardizing the behavior of wireless local area networks.
 
 This association is Wi-Fi Alliance, whose mission, nowadays, is to check and validate the products interoperability and the standard security protections. An example of its functions is to certificate the products that meet 802.11 \cite{wifialliance}.
 
@@ -219,12 +219,12 @@ The main reasons of this success are, the lower costs, the higher speed, and the
 Given these data, we can see how the Wi-Fi will be a widely used tool in telecommunications, and for this reason, its control and monitoring will allow institutions, or entities responsible of these networks know how are these networks used. This is a vital aspect in the world of the future.
 
 \section{GOWEX}
-Gowex, is a telecommunication company, based in Madrid, Spain, whose activity is to deploy Wi-Fi networks for the cities. These networks, are similar to the networks deployed by the cities council, like \emph{Barcelona WiFi}. The main difference between these networks is the network owner. The owner of public Wi-Fi networks, usually, is the council, but in this case, the owner is a private company. And a second difference is that the GOWEX network, has a free service, but has a payment option too, that give a better service for those who need better features. This option is not available in networks deployed by city councils.
+Gowex, is a telecommunication company based in Madrid, Spain, whose activity is to deploy Wi-Fi networks for the cities. These networks are similar to the networks deployed by the city councils, like \emph{Barcelona WiFi}. The main difference between these networks is the network owner. The owner of public Wi-Fi networks is usually the council, but in this case the owner is a private company. And a second difference is that the GOWEX network has a free service, but has a payment option too that give a better service for those who need better features. This option is not available in networks deployed by city councils.
 
 Gowex area of coverage extends over 80 cities worldwide, including cities like Madrid, New York or Miami. Madrid is the european city with more coverage. There are more than 3000 access points installed in Madrid streets and buildings \cite{gowex1}.
 
 \subsection{Wireless Smart City}
-The wireless smart cities are cities with full Wi-Fi coverage for all citizens, where the services given to the citizens are improved using Wi-Fi networks. Samples of this mesure are semaphore control management or the control of transport fleets. These tools not only improve the services offered to the citizen, additionally, reduce ordinary day-to-day costs.
+The wireless smart cities are cities with full Wi-Fi coverage for all citizens, where the services given to the citizens are improved using Wi-Fi networks. Samples of this mesure are semaphore control management or the control of transport fleets. These tools not only improve the services offered to the citizen, but also, reduce ordinary day-to-day costs.
 
 \section{MONITORING SOFTWARE}
 
@@ -247,7 +247,7 @@ PRTG Network Monitor is a monitoring software developed by Paessler AG.
 Some of this software functionalities are:
 \begin{itemize}
 \item Uptime/Downtime monitoring.
-\item Bandwidth monitoring, using SNMP, WMI and others.
+\item Bandwidth monitoring.
 \item SLA monitoring.
 \item QoS monitoring.
 \item Flexible alerts.
@@ -287,7 +287,7 @@ OpManager is used by companies and institutions such as at\&t, Siemens, NASA, Al
 
     \section{HARDWARE COMPONENTS}
         \subsection{Raspberry PI}
-        Raspberry Pi [\ref{fig:raspberry}] is a computer with the size of a credit card, that can do the same things than a ordinary desktop computer. With this device it is possible to program, play games, browse the Internet, play High-definition videos and more. Raspberry Pi uses standard mouse and keyboard, and its interface is shown via HDMI cable. Raspberry Pi is developed by Raspberry Pi Foundation \cite{pi}.
+        Raspberry Pi [\ref{fig:raspberry}] is a computer of the size of a credit card, that can do the same things than a ordinary desktop computer. With this device it is possible to program, play games, browse the Internet, play high-definition videos and more. Raspberry Pi uses standard mouse and keyboard, and its interface is shown via HDMI cable. Raspberry Pi is developed by Raspberry Pi Foundation \cite{pi}.
         
         
         \begin{figure}[htbp]
@@ -305,7 +305,7 @@ There are two models of Raspberry PI, Model A and Model B. For this project, it 
         \item \textbf{Micro-USB Power.} It is used to power the Raspberry PI. 
         \item \textbf{USB 2.0.} Needed to use USB devices, like the keyboard, or the mouse.
         \item \textbf{Ethernet.} Its function is to allow the Raspberry Pi connect to a Network.
-        \item \textbf{HDMI connector}. It give the chance of display the Raspberry Pi interface on a Screen.
+        \item \textbf{HDMI connector}. It gives the chance of displaying the Raspberry Pi interface on a Screen.
         \end{itemize}
         
     All those components, and more, like RCA Video connector or JACK Audio connector, are shown at figure \ref{fig:raspelem}.
@@ -340,7 +340,7 @@ The operating system(OS) installed on the Raspberry Pi for this project is the R
         \end{figure}
         
         \subsection{Access Points}
-        The Access Points (AP), figure \ref{fig:ap}, are devices which main goal is to connect other devices to a network. The access points have to be connected to a router, to provide them the network access. This network can be Internet network, or private networks. These devices will provide a secure access to network devices, like a server. 
+        The Access Points (AP), figure \ref{fig:ap}, are devices whose main goal is to connect other devices to a network. The access points have to be connected to a router, to provide them the network access. This network can be Internet network, or private networks. These devices will provide a secure access to network devices, like a server. 
 
         Often the access points and the router are integrated in one device, to which is added a switch for Ethernet cable connection. So, it is possible to access networks via wireless or cable with the same device \cite{ap}.
         
@@ -356,12 +356,12 @@ The operating system(OS) installed on the Raspberry Pi for this project is the R
     
     \section{SOFTWARE COMPONENTS}
     
-    At this chapter, it is explained the software elements used for the correct operation of the system. The code, and all the material of this project is public at \url{https://github.com/FerranSelva/Visual-Interface-Mashup-for-WiFi-and-Sensor-Networks.git}.
+    At this chapter, it is explained the software elements used for the correct operation of the system. The code, and all the material of this project is public at \url{https://github.com/FerranSelva/Visual-Interface-for-Wi-Fi-Networks-Monitoring.git}.
     
         \subsection{Access}
         \label{access}
         
-      Access is a program made in Java, whose goal is to update the information about the status of the access points. This will be done by accessing these access points and obtaining all the information available. Information as the status, or the availability. Then the information is processed, and finally sent to the database. \\
+      Access is a program made in Java, whose goal is to update the information about the status of the access points. This will be done by accessing these access points and obtaining all the information available. Then the information is processed, and finally sent to the database. \\
         
         Java is a programming language developed in 1995 by Sun Microsystems, now acquired by Oracle Corporation. It is explained at section \ref{java}.\\
         
@@ -369,18 +369,18 @@ The operating system(OS) installed on the Raspberry Pi for this project is the R
         
         Once this information is processed, it is sent to the database located at a server. This transfer of information is done using a web service called by the program, that will access and modify the database locally. The web service is described at section \ref{web service}.
         
-If the program is stopped, or an access point is not working, the Access program, using a method of the web service will send an email to the network manager, with a description of the problem. This reporting will help the manager resolving issues easily.
+If the program is stopped, or an access point is not working, the Access program using a method of the web service will send an email to the network manager with a description of the problem. This reporting will help the manager resolving issues easily.
         
-        Each class of this program has a function, and some of them have the same name than the web server method that uses. The section \ref{classes} discuses about these classes.\\
+        Each class of this program has a function, and some of them have the same name than the used web server method. The section \ref{classes} discusses about these classes.\\
         
-The Access program is located at the Raspberry PI, and it is ran when the device is started, this program will not stop until the user give this order. To work properly, the Raspberry Pi should be located at the same network of the access points to have access via ICMP. While ICMP is used, usually, to report an error in the datagram processing, in this system, it is used to know the status of the hotspots.\\
+The Access program is located at the Raspberry PI, and it is run when the device is started, this program will not stop until the user gives this order. To work properly, the Raspberry Pi should be located at the same network of the access points to have access via ICMP. While ICMP is usually used to report an error in the datagram processing, in this system, it is used to know the status of the hotspots.\\
 
-            It is described ICMP at section \ref{icmp}.
+            ICMP is described at section \ref{icmp}.
 
             \paragraph{Java}
             \label{java}\\
-            Java is a programming language, used to develop all type of programmes. Programmes like games, mobile application, enterprise software and more. 
-            Java has been tested, improved and extended by Java developers. The results of this actions are that Java is fast and secure \cite{Java}. 
+            Java is a programming language, used to develop all type of programs. These programs could be games, mobile application, enterprise software and more. 
+            Java has been tested, improved and extended by Java developers. The results of these actions are that Java is fast and secure \cite{Java}. 
             
             Java allows developers to:
             \begin{itemize}
@@ -391,7 +391,7 @@ The Access program is located at the Raspberry PI, and it is ran when the device
             \item Write applications for multiple devices, like mobile phones, microcontrollers and others.
 \end{itemize}
             
-           For this project, it is used classes such as \emph{HttpURLConnection}, \emph{Runtime} or \emph{BufferedReader}. The first, \emph{HttpURLConnection}, is used to connect the program with the web service. \emph{Runtime} is used to run terminal commands. The command to be run is a ping to an access point. To get the response of the ping, it is used the class \emph{BufferedReader}, that gets the response from the web service or terminal. 
+           For this project, classes such as \emph{HttpURLConnection}, \emph{Runtime} or \emph{BufferedReader} are used. The one, \emph{HttpURLConnection}, is used to connect the program with the web service. \emph{Runtime} is used to run terminal commands. The command to be run is a ping to an access point. To get the response of the ping, the class \emph{BufferedReader}is used. This class gets the response from the web service or terminal. 
              
             
             \paragraph{ICMP}
@@ -413,7 +413,7 @@ The Access program is located at the Raspberry PI, and it is ran when the device
        
        For this project, the main goal of ICMP is to get the availability of the access points of a network. Using the ping response at the terminal, the program Access determines if the access point is UP or DOWN.\\
         
-        It is shown the Raspberry Pi running the Access program, at the figure \ref{fig:Rasprun}
+        Figure \ref{fig:Rasprun} shows the Raspberry Pi running the Access program.
         
         \begin{figure}[htbp]
           \centering
@@ -429,7 +429,7 @@ The Access program is located at the Raspberry PI, and it is ran when the device
             \label{classes}
                 \paragraph{ConnectionMongo.java}
                 
-                ConnectionMongo is the main class of the program. This will call other classes when needed. This class will begin, getting the ID and the corresponding IP, of all nodes of the network. This will be done using the methods \textit{FindID()} and \textit{FindIP()} from the class getData, described at section \ref{getData.java}. Then, it will run a sequence until the process stop or the Raspberry Pi powers off. This sequence will start doing a ping to each node using method \textit{doPing()} of the Ping class. Next step is to update Resume collection from the database, using updateResume, getlastupdate, and postResume classes. The fields ``STATUS", ``SINCE", ``TOTALTIME", ``UPTIME", ``DOWNTIME" and ``AVAILABILITY" will be updated. Then the program will insert to Data collection all the information collected for later use.\\
+                ConnectionMongo is the main class of the program. This will call other classes when needed. This class will begin, getting the ID and the corresponding IP, of all nodes of the network. This will be done using the methods \textit{FindID()} and \textit{FindIP()} from the class getData, described in section \ref{getData.java}. Then, it will run a sequence until the process stops or the Raspberry Pi powers off. This sequence will start doing a ping to each node using method \textit{doPing()} of the Ping class. The next step is to update Resume collection from the database, using updateResume, getlastupdate, and postResume classes. The fields ``STATUS", ``SINCE", ``TOTALTIME", ``UPTIME", ``DOWNTIME" and ``AVAILABILITY" will be updated. Then the program will insert to Data collection all the information collected for later use.\\
             
                 \paragraph{getData.java}
                 \label{getData.java}
@@ -447,14 +447,14 @@ The Access program is located at the Raspberry PI, and it is ran when the device
 
                 \paragraph{Ping.java}
                 
-                Class Ping is used to do a a ping to the access points. This class has a unique method called \textit{doPing()}, that will use ICMP protocol to do a ping to a specific node. The method \textit{doPing} is a boolean that will return true or false, depending on the response received of the ping.\\
+                Class Ping is used to do a a ping to the access points. This class has a single method called \textit{doPing()}, that will use ICMP protocol to do a ping to a specific node. The method \textit{doPing} is a boolean that will return true or false, depending on the response received from the ping.\\
                 
                 \paragraph{postData.java}
                 
                 The class postData is used to insert information about the access points to the Data collection. This class calls a method \textit{insertdata()}, that will use a web service to insert to the collection Data a document with the ID, the status, and the timestamp of a hotspot. \\
                 
                 \paragraph{postResume.java}
-                This class objective is to update the information of an access point on the Resume collection. This class calls two methods, \textit{modifystate()}, that will update the status of an access point. And \textit{modifytime()} is used to modify the other values related to the time, this values are totaltime, uptime, downtime and availability. The class \emph{postResume} will be called in the class updateResume.\\
+                This class objective is to update the information of an access point on the Resume collection. This class calls two methods, \textit{modifystate()}, that will update the status of an access point. And \textit{modifytime()} is used to modify the other values related to the time, these values are totaltime, uptime, downtime and availability. The class \emph{postResume} will be called in the class updateResume.\\
                 
                 \paragraph{updateResume.java}
                 This class aims to process the information gotten, and update the Resume collection with the results. The class updateResume has a unique method \textit{update()} that will use postResume class to update the database.
@@ -464,7 +464,7 @@ The Access program is located at the Raspberry PI, and it is ran when the device
                  \paragraph{Sendmail.java}
                  The main objective of the Sendmail class is to send a post request to the web service who will send an email to an specific address.
                  
-                 This class calls a method \textit{send()}, it is used to notify the manager of the network when the program is stopped, or when an access point is down.
+                 This class calls a method \textit{send()}. It is used to notify the manager of the network when the program is stopped, or when an access point is down.
                  When it is notifying the program stop, the program sends the cause of this stop using \textit{Java Exceptions}.
                  When it is notifying the down status of an access point it sends the ID of the node that is not working properly.
 
@@ -474,7 +474,7 @@ The Access program is located at the Raspberry PI, and it is ran when the device
         
             \subsubsection{Flowchart}
             
-            The flowchart that describes the behaviour of the Access program is shown at the figure \ref{fig:accessp}. 
+            The flowchart that describes the behaviour of the Access program is shown in the figure \ref{fig:accessp}. 
             % Afegir enviar mail si el programa es para!
             \begin{figure}[htbp]
               \centering
@@ -528,14 +528,14 @@ In this case, \emph{index.html} sets a Google maps map and calls the function.js
                 \item{Writing desktop applications (Not used very usually).}
                 \end{itemize}\\
                 
-                PHP is read/ran at the server and the output has HTML format. So, this output will be readable by the browsers. PHP is a good option to access databases, because the php code is not shown on the page \cite{php}.
+                PHP is read/run at the server and the output has HTML format. This output will be readable by the browsers. PHP is a good option to access databases, because the php code is not shown on the page \cite{php}.
                 
                 In this project, PHP is used by the web application, to get the information that will be displayed in the map.
                  
                 Also PHP makes possible the information exchange between the Raspberry Pi and the Server. This is done using a web service composed by the PHP files. This PHP files use a Mongodb module to access the information stored.\\
 
 
-It is shown the web application that shows the status of the access points from \textit{guifi.net}\footnote{\textit{guifi.net} is an open and free network, build for all who want to join. The user will provide his connection, this will extend the network, and consequently the user will get more connectivity to other nodes of this network \cite{guifinet}.} network at the figure \ref{fig:wapp}.
+Figure \ref{fig:wapp} shows the web application that presents the status of the access points from \textit{guifi.net}\footnote{\textit{guifi.net} is an open and free network, build for all who want to join. The user will provide his connection, this will extend the network, and consequently the user will get more connectivity to other nodes of this network \cite{guifinet}.} network.
 
         \begin{figure}[htbp]
           \centering
@@ -580,15 +580,15 @@ It is shown the web application that shows the status of the access points from 
         
             \subsubsection{Why MongoDB?}
             
-            For this project, the database used is MongoDB. The decision of use MongoDB, a NoSQL database, instead of SQL-based databases is explained at the following paragraphs.
+            For this project, the database used is MongoDB. The decision of using MongoDB, a NoSQL database, instead of SQL-based databases is explained at the following paragraphs.
             
            NoSQL databases were developed with the objective of solve the limitations of the SQL-based Databases. The main limitations to be solved were the scalability, a important feature for this project, the replication, and the unstructured data storage.
            
            The result of this development is that NoSQL databases have better performance and are more scalable than SQL ones. In addition, NoSQL databases have better results when talking in terms of holding a large volume of data, quick iterations, object-oriented programming, and scalability \cite{nosql}.
 
-        Its cost is cheaper than SQL-based ones. All NoSQL databases are open-source, while SQL ones, can be open-source or closed source. Another benefit is that NoSQL databases are dynamic while SQL ones are fixed.
+            All NoSQL databases are open-source, while SQL ones, can be open-source or closed source. Another benefit is that NoSQL databases are dynamic while SQL ones are fixed.
         
-        All those features, suggest that the best choice is NoSQL Databases, and specifically MongoDB because it is simple to use and has a good performance \cite{nosql}.
+            All those features, suggest that the best choice is NoSQL Databases, and specifically MongoDB because it is simple to use and has a good performance \cite{nosql}.
 
             \subsubsection{Operation}
             \paragraph{BSON}\\
@@ -623,7 +623,7 @@ It is shown the web application that shows the status of the access points from 
             
             \centerline{\textbf{db.collection.find(\textless criteria\textgreater, \textless projection\textgreater)}}\\
             
-            where \textit{collection} is the name of the collection from where the documents will be obtained. \textit{Criteria} and \textit{projection} are optional fields. The first one, \textit{Criteria}, is a field used to find documents that follow a specific conditions. It is possible to set ``equal" condition, ``greater" condition, and others. The second one, \textit{projection}, define the fields of the documents to be returned.
+            where \textit{collection} is the name of the collection from where the documents will be obtained. \textit{Criteria} and \textit{projection} are optional fields. The first one, \textit{Criteria}, is a field used to find documents that follow a specific conditions. It is possible to set ``equal" condition, ``greater" condition, and others. The second one, \textit{projection}, defines the fields of the documents to be returned.
             
             \item \textbf{Update}
             
@@ -634,7 +634,7 @@ It is shown the web application that shows the status of the access points from 
             
             \item \textbf{Insert}
             
-            This function adds new documents to a collection. This command follow the next syntax: \\
+            This function adds new documents to a collection. This command follows the next syntax: \\
                 
             \centerline{\textbf{db.collection.insert(\textless document\textgreater)}}\\
             where the \textit{document} is the document or array of documents to add to the collection.
@@ -645,14 +645,14 @@ It is shown the web application that shows the status of the access points from 
             
             \centerline{\textbf{db.collection.remove(query, options)}}\\
             
-            \textit{query} is a mandatory field, witch specify the deleting criteria. \textit{Options} field is to add features like ``justOne" or ``writeConcern".
+            \textit{query} is a mandatory field, wich specifies the deleting criteria. \textit{Options} field is to add features like ``justOne" or ``writeConcern".
             
             
             \end{itemize}
 
             \subsubsection{Collections}
             
-            For the correct operation of the system, there are needed two collections. These collections are described next:
+            For the correct operation of the system, two collections are needed. These collections are described next:
             \paragraph{Resume}
             
             Collection Resume stores all Access Point information using a document per Access Point. The information included in these documents, for each Access Point is: 
@@ -669,7 +669,7 @@ It is shown the web application that shows the status of the access points from 
             \item Availability.
             \end{itemize}
             
-            The last six fields, status, since, totaltime, uptime, downtime and availability, will be modified, updating these values for the current ones. This current ones will be obtained and modified on this collection by the Access program on the Raspberry Pi.
+            The last six fields, status, since, totaltime, uptime, downtime and availability, will be modified, updating these values for the current ones. These current ones will be obtained and modified on this collection by the Access program on the Raspberry Pi.
             
             \paragraph{Data}
             
@@ -720,11 +720,11 @@ It is shown the web application that shows the status of the access points from 
                 \item Availability.
                 \end{itemize}
                 
-                The method, require three parameters, the \textit{field} to be updated, the new \textit{value} of the field, and the \textit{id} of the node whose field will be modified.\\
+                The method requires three parameters. The \textit{field} to be updated, the new \textit{value} of the field, and the \textit{id} of the node whose field will be modified.\\
                 
                 
                 \paragraph{postData.php}
-                This method is used by the Access program to add new documents to the Data collection. The insertion of these documents will happen each time that Access program pings to a hotspot, and the result of these pings is stored in those documents. These documents, to be inserted, should have the fields ID, STATUS and TimeStamp. 
+                This method is used by the Access program to add new documents to the Data collection. The insertion of these documents will happen each time that Access program pings to a hotspot, and the result of these pings is stored in those documents. These documents to be inserted should have the fields ID, STATUS and TimeStamp. 
                 
                 So the parameters needed for this method are \textit{id}, \textit{status} and \textit{timestamp}.\\
                 
@@ -747,7 +747,7 @@ The structure of the system is illustrated at figure \ref{fig:arq}. The followin
             \item Hotspots. 
         \end{itemize}
         
-        The operation of this section will begin with the implementation of a Raspberry Pi into the same network that the access points to be monitored. Once the Raspberry Pi is booted, it begin, automatically, a process that executes the Access program, explained at section \ref{access}. This program will try to ping access points of the network. The IPs to be pinged, have to be gotten from the database located at server using getData method. When the pings are done, the information about this access points is processed. Then the Raspberry PI, using the program, must access to a web service, located at the server, to store the information.
+        The operation of this section will begin with the implementation of a Raspberry Pi into the same network that the access points to be monitored. Once the Raspberry Pi is booted, it automatically begin a process that executes the Access program, explained at section \ref{access}. This program will try to ping access points of the network. The IPs to be pinged, have to be gotten from the database located at server using getData method. When the pings are done, the information about this access points is processed. Then the Raspberry PI, using the program, must access to a web service, located at the server, to store the information.
         
        % Falta Afegir Text: "Servidor"
        %eliminar IMI (en el cloud)
@@ -763,13 +763,13 @@ The structure of the system is illustrated at figure \ref{fig:arq}. The followin
         
         The server will receive and store the information about the access points. The storage of this information will be done by the MongoDB database, and the communication between Access program and the database is done using a web service.\\
         
-        The other section, use the following elements:
+        The other section uses the following elements:
           \begin{itemize}
             \item Server.
             \item Users Devices.
         \end{itemize}
         
-        This section main goal is to display, using a web application, the information once this has been gotten and processed with a simple format to let everyone understand it. The web application is located at the server, and using Apache HTTP, will serve a web application, at the domain \url{http://cfe.nets.upf.edu/}. This web application will show, at the location of the access points, the information stored at the database. Or, what is the same, the information gathered at the previous section.\\
+        This section main goal is to display, using a web application, the information once this has been gotten and processed with a simple format to let everyone understand it. The web application is located at the Apache HTTP server. The web application is available at the domain \url{http://cfe.nets.upf.edu/}. This web application will show, at the location of the access points, the information stored at the database. Or, what is the same, the information gathered at the previous section.\\
         
         The citizen, only has to open the browser at the domain \url{http://cfe.nets.upf.edu/} to check the status of the access points of the network being monitored.
         
@@ -843,18 +843,17 @@ The figures \ref{fg:resumebt} to \ref{fg:dataat}, shows the stats of the collect
     
     When the system starts monitoring the network, the fields ``STATUS", ``SINCE", ``TOTALTIME", ``UPTIME", ``DOWNTIME" and ``AVAILABILITY" are modified to the values obtained by the Access program.
     
-    At the end, the size of this collection, was of 12.944 Bytes. It increased. But this increase is not significant.
+    At the end, the size of this collection, was of 12.944 Bytes. It increased, but this increase is not significant.
 
     \subsection{Number of Documents}
     
-    The Resume collection, has always the same number of documents.
-    While Data collection, will increase its documents number, each iteration by the number of access points to be monitored.
+    The Resume collection, has always the same number of documents, while Data collection will increase its documents number in each iteration by the number of access points to be monitored.
     
-    This is the reason why Data collection increased the number of documents in 19.766, while Resume collection remain in 45 documents.
+    This is the reason why Data collection increased the number of documents by 19.766, while Resume collection remain in 45 documents.
     
     \subsection{Document Size}
     
-    Documents from Resume collection has more size because its documents have more fields than Data collection ones. While Data documents will have 3 fields, the Resume documents include 10 fields. 
+    Documents from Resume collection is larger because its documents have more fields than Data collection ones. While Data documents will have 3 fields, the Resume documents include 10 fields. 
     The difference between the both collections documents size is of 182'66 Bytes.
 
 
@@ -863,7 +862,7 @@ Mailing feature has operated correctly. The email address that sends and recieve
 
 It has received 223 emails about the stop of different access points and server warnings during the five days that the system was been tested.
     
-    For example, the program reported that hotspot with ID: \textbf{BCNgranvia940AH} was down, several times. This mean that the node has been changed its status UP to DOWN and DOWN to UP several times. 
+    For example, the program reported that hotspot with ID: \textbf{BCNgranvia940AH} was down, several times. This mean that the node has changed its status UP to DOWN and DOWN to UP several times. 
     
     Probably this access point is damaged, and it should be repaired or changed.
     
@@ -910,7 +909,7 @@ The Access program was executed correctly at the boot of the Raspberry Pi, and t
     
     \subsection{Unexpected stops}
     There were no unexpected stops during the five days that the system was being tested.
-Anyway, the system stop should not be a problem, because restart the system is easy. Just rebooting the Raspberry Pi, the access program should be executed automatically, and continue monitoring the access points of the network. No action is required at the database, to follow working properly.
+Anyway, the system stop should not be a problem, because restart the system is easy. By rebooting the Raspberry Pi, the access program executes automatically and continue monitoring the access points of the network. No action is required at the database to keep working properly.
     
     \subsection{Warnings Reported}
     There is one warning reported. This warning is:
@@ -927,17 +926,17 @@ Anyway, the system stop should not be a problem, because restart the system is e
     
     For test the system, emerged a new organization, called Guifi.net. This institution, gave permission for the test of the system using its network \emph{Poblenou Sense Fils} located at Poblenou district in Barcelona.} 
     
-    The communication with this institution was easier, and the fact that its network has a node at the Universitat Pompeu Fabra, was helpful when the system was being tested. 
+    The communication with this institution was easier, and the fact that its network has a node at the Universitat Pompeu Fabra was helpful when the system was being tested. 
     
     
 \chapter{CONCLUSIONS}
 \label{Chapter6}
 
-This project shows that is possible to implement a inexpensive system to monitor the Access Points of a determined network. This will not give a full knowledge of the access points status, but will give some valorous information.
+This project shows that it is possible to implement a inexpensive system to monitor the Access Points of a determined network. This will not give a full knowledge of the access points status, but will give some valuous information.
 
 The system is composed by a Raspberry Pi and a Server. The Raspberry Pi is hosting a program made in java to get information about the access points. The server, is used to host the web application, the web service, and the MongoDB database. The web application displays the information stored at the database, and the web service is used for the information exchange between the Raspberry Pi and the server. Finally, the Database stores the information gotten by the program at Raspberry Pi.
 
-The system has been tested during five days. The information recollection has operated correctly. There has not been problems with the web application. The emails were sent at the correct moment, with the correct content. In summary, the results of the test show a good performance of the system.
+The system has been tested during five days. The information gathering has operated correctly. There has not been problems with the web application. The emails were sent at the correct moment, with the correct content. In summary, the results of the test show a good performance of the system.
 
 The system is simple, this allows the correct operation for all networks just knowing the IP Addresses of the hotspots. On the other hand, there is a lot of information that could be interesting to know that is being lost.
 
@@ -959,9 +958,9 @@ It is possible to integrate SNMP queries to java codes. There are libraries like
 
 So, this options is something to be considered. The Access program could execute the code to use this protocol. The hardware and software of the system can support this protocol too. The only question is if all the access points will support this protocol and which version of it. 
 
-There are compatibility problems between different versions of SNMP. This is something that should take into account if there is the intention of deploy this protocol to the system.
+There are compatibility problems between different versions of SNMP. This is something that should be taken into account if there is the intention of deploy this protocol to the system.
 
-Moreover, it could be improved the interface of the web application. Nowadays, it is displayed the map with Access Points and the available information. To this information, it could be added features like, view the log of a particular access point, or add search options like search an access point by status, area or fewer users.
+Moreover, the interface of the web application could be improved. Nowadays, it is displayed the map with Access Points and the available information. Additional features could be added. Examples include viewing the log of a particular access point and adding search options. The search criteria could be the access point status, the geographical area or the number of users. like search an access point by status, area or fewer users.
 
      \begin{figure}[htbp]
           \centering
